@@ -38,8 +38,6 @@ try:
     streamlit.dataframe(back_from_function)
 except URLError as e:
   streamlit.write('The user entered ', fruit_choice)
-
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # display the data as dataframe
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
